@@ -69,3 +69,7 @@
 
 @endif
 p
+<li class="{{ Request::is('courseOutlines*') ? 'active' : '' }}">
+    <a href="{{ route('courseOutlines.index') }}"><i class="fa fa-edit"></i><span>Course Outlines</span></a>
+</li>
+

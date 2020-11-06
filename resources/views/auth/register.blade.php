@@ -6,7 +6,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="shortcut icon" href="uploads/images/logo/liveonlineacademy/logoicon.png" type="image/x-icon"> <!--===============================================================================================-->
+
+    <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -30,7 +31,7 @@ background: radial-gradient(circle, rgba(211,211,211,1) 4%, rgba(255,255,255,1) 
                     <a  href="{{ url('/') }}">
 
                     <span class="login100-form-title">
-					   <img src="uploads/images/logo/liveonlineacademy/logo.png" alt="IMG" style="border-radius: 15px; width: 150px;">
+					   <img src="log/logo.png" alt="IMG" style="border-radius: 15px; width: 150px;">
 
 					</span>
                     </a>

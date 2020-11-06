@@ -67,3 +67,6 @@ Route::resource('roles', 'RoleController');
 Route::resource('coupons', 'CouponController');
 
 Route::resource('catergories', 'CatergoryController');
+
+
+Route::resource('courseOutlines', 'Course_outlinesController');

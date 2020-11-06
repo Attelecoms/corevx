@@ -130,6 +130,10 @@ class Course extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+    public function course_outline()
+    {
+        return $this->belongsTo('App\Models\Course_outlines');
+    }
     public function user()
     {
         return $this->belongsTo('App\Models\User');

@@ -8,10 +8,11 @@ use App\Http\Requests\UpdateCourseRequest;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Course;
+use App\Models\Course_outlines;
 use App\Models\CourseUser;
 use App\Models\Item;
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Str;
 use App\Repositories\CourseRepository;
 //use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
@@ -176,9 +177,10 @@ else{
         if (empty($course)) {
             Flash::error('Course not found');
 
+
             return redirect(route('courses.index'));
         }
-
+        $course_outlines=Course_outlines::where('course_id',$id)->get();
 //     2   now writing a query to select or show  course  with category_id in courses table is same with category id in category table
 
         $users=Course::find($id)->users()->get();
@@ -187,7 +189,7 @@ else{
 //        3  now we want to increment the viws when ever we refresh the page so we import facades  the it use the id ot identify
         DB::table('courses')->where('id',$id)->increment('view_count');
 //dd($users);
-        return view('courses.show')->with('course', $course)->with('users', $users);
+        return view('courses.show')->with('course', $course)->with('users', $users)->with('course_outlines', $course_outlines);
 //        return view('courses.show')->with('course', $course->users);
     }
 

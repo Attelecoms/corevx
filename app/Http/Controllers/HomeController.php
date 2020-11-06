@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course_outlines;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\User;
+use Illuminate\Support\Str;
+
 use Auth;
 class HomeController extends Controller
 {
@@ -35,9 +38,13 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-        $courses = Course::all();
+        $courses = Course::latest()->take(6)->get();
         $users = User::all();
-        return view('index')->with('courses',$courses)->with('categories', $categories)->with('users', $users);
+        $course_outlines = Course_outlines::all();
+        return view('index')->with('courses',$courses)
+            ->with('categories', $categories)
+            ->with('course_outlines', $course_outlines)
+            ->with('users', $users);
     }
     public function home(){
 
@@ -45,9 +52,13 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-        $courses = Course::all();
-        $users = User::all();
-        return view('index')->with('courses',$courses)->with('categories', $categories)->with('users', $users);
+        $courses = Course::inRandomOrder()->take(6)->get();
+        $users = User::all(); $course_outlines = Course_outlines::all();
+        return view('index')
+            ->with('courses',$courses)
+            ->with('course_outlines', $course_outlines)
+            ->with('categories', $categories)
+            ->with('users', $users);
     }
     public function contact(){
 
@@ -55,9 +66,10 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-        $courses = Course::all();
+        $courses = Course::inRandomOrder()->get();
+        $latestcourses = Course::latest()->get();
 
-        return view('contact')->with('courses',$courses)->with('categories', $categories);
+        return view('contact')->with('courses',$courses)->with('courses',$latestcourses)->with('categories', $categories);
     }
     public function blog(){
 
@@ -74,10 +86,11 @@ class HomeController extends Controller
         if(Auth::check()){
             return redirect()->route('courses.index');
         }
-        $categories = Category::all();
-        $courses = Course::all();
+        $categories = Category::inRandomOrder()->get();
+        $latestcourses = Course::latest()->take(4)->get();
+        $courses = Course::inRandomOrder()->take(6)->get();
 
-        return view('course')->with('courses',$courses)->with('categories', $categories);
+        return view('course')->with('courses',$courses)->with('latestcourses',$latestcourses)->with('categories', $categories);
     }
 
     public function about(){

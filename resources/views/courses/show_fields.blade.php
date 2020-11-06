@@ -202,7 +202,26 @@
 <!-- What Will Students Learn Field -->
 <div class="form-group  col-md-6">
     {!! Form::label('what_will_students_learn', 'What Will Students Learn:') !!}
-    <p>{{ $course->what_will_students_learn }}</p>
+{{--  {{ $course->what_will_students_learn }}--}}
+        @foreach ($course_outlines as $course_outline)
+
+
+        <table class="table table-striped">
+
+            <tbody>
+            <tr>
+{{--                <th scope="row">1</th>--}}
+                <td><i class="fa fa-certificate"></i></td>
+                <th> {{ $course_outline->course_title}}</th>
+                <th> {{ $course_outline->duration}}</th>
+            </tr>
+
+            </tbody>
+        </table>
+
+        @endforeach
+
+
 {{--   p <br>--}}
 {{--    {!! Form::label('what_will_students_learn', 'Course Content:') !!}--}}
 {{--    <img class="card-img-top" height="400px" src="{{  asset('storage/course_outline/'.$course->course_outline)}}" >--}}
