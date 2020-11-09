@@ -11,8 +11,10 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('courses.show_fields')
+                    @if(Auth::user()->role_id<3)
                     <h3 class="text-center w-100">Subscriber</h3>
                     @include('users.table-user')
+                    @endif
                     <a href="{{ route('courses.index') }}" class="btn btn-default">Back</a>
                 </div>
             </div>

@@ -47,13 +47,13 @@
     </div><!-- .row -->
 
     <div class="row justify-content-between">
-        <div class="col-12">
+        <div class="col-12 col-md-6 col-lg-4 px-25">
             <div class="contact-gmap">
-                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAyCkIjViJ_7vt5PMIHai_NjcdR64QYycw&q=Space+Needle,Seattle+WA" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.6185804915976!2d31.052985577016052!3d-17.856506481847163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a576ef545831%3A0x64bc70a616529375!2sAT%20Academy!5e0!3m2!1sen!2szw!4v1596632394532!5m2!1sen!2szw" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div><!-- .contact-gmap -->
         </div><!-- .col -->
 
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-md-6 col-lg-4 px-25">
             <div class="contact-form">
                 <h3>Contact Form</h3>
 
@@ -64,11 +64,11 @@
             </div><!-- .contact-form -->
         </div><!-- .col -->
 
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-md-6 col-lg-4 px-25">
             <div class="contact-info">
-                <h3>Contact Information</h3>
+                <h3>Need help ?</h3>
 
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. </p>
+                <p>Get in touch to receive more info . </p>
 
                 <ul class="p-0 m-0">
                     <li><span>Location:</span>202 Seke rd Block 2 Nedlew Complex Graniteside Harare</li>
@@ -77,6 +77,7 @@
                 </ul>
             </div><!-- .contact-info -->
         </div><!-- .col -->
+
     </div><!-- .row -->
 </div><!-- .container -->
 

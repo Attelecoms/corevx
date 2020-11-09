@@ -7,7 +7,7 @@
                 </div><!-- .icon -->
 
                 <header class="entry-header">
-                    <h2 class="entry-title">Learn From The Experts</h2>
+                    <h2 class="entry-title">Artificial Intelligence</h2>
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">
@@ -61,7 +61,7 @@
                 </div><!-- .icon -->
 
                 <header class="entry-header">
-                    <h2 class="entry-title">Artificial Intelligence</h2>
+                    <h2 class="entry-title">Network Security</h2>
                 </header><!-- .entry-header -->
 
                 <div class="entry-content">

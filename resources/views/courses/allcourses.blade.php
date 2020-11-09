@@ -1,5 +1,6 @@
-<div class="featured-courses courses-wrap">
 
+
+<div class="featured-courses courses-wrap" id="example">
     <div class="row mx-m-25">
         @foreach($courses as $course)
 
@@ -24,7 +25,7 @@
                             <div class="course-author"><a href="#">  {{ $course->user['name'] }}
                                 </a></div>
 
-                            <div class="course-date">July 21, 2018</div>
+                            <div class="course-date">{{ $course->created_at->format('h :i a-Dd M Y') }}</div>
                         </div><!-- .course-date -->
                     </header><!-- .entry-header -->
 
@@ -51,4 +52,15 @@
 
 </div><!-- .featured-courses -->
 
-
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                'pdfHtml5'
+            ]
+        } );} );
+</script>

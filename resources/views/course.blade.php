@@ -68,18 +68,18 @@
                 </div>
 
                 <div class="col-12 flex justify-content-start justify-content-lg-end col-lg-8 order-1 order-lg-2">
-                    <div class="pagination-results flex flex-wrap align-items-center">
-                        <p class="m-0">Showing 1–3 of 12 results</p>
+{{--                    <div class="pagination-results flex flex-wrap align-items-center">--}}
+{{--                        <p class="m-0">Showing 1–3 of 12 results</p>--}}
 
-                        <form>
-                            <select>
-                                <option>Show: 06</option>
-                                <option>Show: 12</option>
-                                <option>Show: 18</option>
-                                <option>Show: 24</option>
-                            </select>
-                        </form>
-                    </div><!-- .pagination-results -->
+{{--                        <form>--}}
+{{--                            <select>--}}
+{{--                                <option>Show: 06</option>--}}
+{{--                                <option>Show: 12</option>--}}
+{{--                                <option>Show: 18</option>--}}
+{{--                                <option>Show: 24</option>--}}
+{{--                            </select>--}}
+{{--                        </form>--}}
+{{--                    </div><!-- .pagination-results -->--}}
                 </div>
             </div><!-- .pagination -->
         </div><!-- .col -->
