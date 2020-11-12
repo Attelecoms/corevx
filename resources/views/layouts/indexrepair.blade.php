@@ -25,10 +25,14 @@
                 <div class="service-cards-container scrollbar-primary" id="categories-scroll-container" style="overflow: hidden;">
                     <div class="categories service-cards">
 
+{{--                        @foreach($categories as $category)--}}
 
+{{--                                        <span>--}}
+{{--                                            <a >{{$category->name }}</a>--}}
+{{--                                        </span>--}}
 
                         @foreach($courses as $course)
-                            @if($category->id ==$course->category_id)
+{{--                            @if($category->id ==$course->category_id)--}}
                                 <a href="{{ url('/courses/'.$course->id) }}" title="{{  str_limit($course->title ,$limit=40 ,$end='...')}}" class="category" style="background-image: linear-gradient(to bottom,white, white); width: 180px;height: 220px;">
                                     <div class="icon-container" sstyle="height: 800%;" >
                                         <img src="{{  asset('storage/course_image/'.$course->photo)}}" alt="{{  str_limit($course->title ,$limit=40 ,$end='...')}}"  style="height: 100%; width:100%; border-radius: 5px; "/>
@@ -49,7 +53,8 @@
 
                                     </div>
                                 </a>
-                            @endif
+{{--                            @endif--}}
+{{--                        @endforeach--}}
                         @endforeach
 
 
@@ -156,3 +161,5 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
+
+

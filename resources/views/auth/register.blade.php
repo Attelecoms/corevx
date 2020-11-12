@@ -1,40 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Atacademy -Registration</title>
+    <title>Atacdemy-Login</title>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
 
-    <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
+    <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon"> <!--===============================================================================================-->
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
+
+    {{--code for including the header links --}}
+    @include('headerr.header')
+    {{--code for including the header links --}}
+
+
 </head>
-<body>
+<body class="about-page">
+<div class="page-header">
+    <header class="site-header">
+        <header class="site-header">
+            {{-- code of including the top header code--}}
+            @include('headerr.topheader')
+            {{-- code of including the top header code--}}
 
-<div class="limiter">
-    <div class="container-login100"  style="background: rgb(211,211,211);
-background: radial-gradient(circle, rgba(211,211,211,1) 4%, rgba(255,255,255,1) 63%);">
-        <div class="wrap-login100" style="width: 470px; ">
+
+            {{-- code of including the navbar code--}}
+            @include('headerr.navbar')
+            {{-- code of including the navbar code--}}
+
+        </header><!-- .site-header -->
+    </header><!-- .site-header -->
+
+    <div class="page-header-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="entry-header">
+                        <center> </center>
+                    </header><!-- .entry-header -->
+                    <center>
+                        <div class="wrap-login100" style="">
 
 
 
-                <form method="post" action="{{ url('/register') }}" class="login100-form validate-form"style="margin-top: -100px;">
+                        <form method="post" action="{{ url('/register') }}" class="login100-form validate-form">
 
                     {!! csrf_field() !!}
-                    <a  href="{{ url('/') }}">
-
-                    <span class="login100-form-title">
-					   <img src="log/logo.png" alt="IMG" style="border-radius: 15px; width: 150px;">
-
-					</span>
-                    </a>
+                            <h5>Register</h5>
 
                     <div class="wrap-input100 validate-input  form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
                         <input type="text" class="input100" name="name" value="{{ old('name') }}" placeholder="Full Name">
@@ -106,29 +121,35 @@ background: radial-gradient(circle, rgba(211,211,211,1) 4%, rgba(255,255,255,1) 
                     </a>
                 </div>
             </form>
-        </div>
-    </div>
-</div>
 
 
 
 
-<!--===============================================================================================-->
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/tilt/tilt.jquery.min.js"></script>
-<script >
-    $('.js-tilt').tilt({
-        scale: 1.1
-    })
-</script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
 
+
+
+                        </div>
+                    </center>
+
+
+                    {{-- code of including the branding code--}}
+                    @include('layouts.branding')
+                    {{-- code of including the branding code--}}
+
+
+                    {{-- code of including the footer bav code--}}
+                    @include('footerr.footer_bar')
+                    {{-- code of including the footer bav code--}}
+
+                    {{-- code of including the footerlinks bav code--}}
+                    @include('footerr.footer')
+                    {{-- code of including the footerlinks bav code--}}
+
+                </div><!-- .col -->
+
+
+
+
+            </div></div></div></div>
 </body>
 </html>

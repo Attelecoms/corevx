@@ -1,9 +1,15 @@
+<style>
+    .invalid-feedback{
+        display: block;
+    }
+</style>
+
 @if(Session::has('flash_message'))
     <div class="alert alert-success">{{Session::get('flash_message')}}</div>
 @endif
 
 
-<form method="post" action="/contact">
+<form method="post" action="{{route('contact.store')}}">
     {{csrf_field()}}
     <input type="text" class="form-control" name="name" placeholder="Your Name">
     @if($errors->has('name'))

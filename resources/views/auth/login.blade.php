@@ -8,113 +8,126 @@
     <!--===============================================================================================-->
 
     <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon"> <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--===============================================================================================-->
+
+    {{--code for including the header links --}}
+    @include('headerr.header')
+    {{--code for including the header links --}}
+
+
 </head>
-<body>
-
-<div class="limiter">
-    <div class="container-login100"  style="background: rgb(211,211,211);
-background: radial-gradient(circle, rgba(211,211,211,1) 4%, rgba(255,255,255,1) 63%);">
-
-        <div class="wrap-login100" style="width: 470px; ">
-
-
+<body class="about-page">
+<div class="page-header">
+    <header class="site-header">
+        <header class="site-header">
+            {{-- code of including the top header code--}}
+            @include('headerr.topheader')
+            {{-- code of including the top header code--}}
 
 
-            <form class="login100-form validate-form" method="post" action="{{ url('/login') }}" style="margin-top: -100px;">
-                {!! csrf_field() !!}
+            {{-- code of including the navbar code--}}
+            @include('headerr.navbar')
+            {{-- code of including the navbar code--}}
 
-                <a  href="{{ url('/') }}">
+        </header><!-- .site-header -->
+    </header><!-- .site-header -->
 
-                    <span class="login100-form-title">
-						   <img src="log/logo.png" alt="IMG" style="border-radius: 15px; width: 150px;">
+    <div class="page-header-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <header class="entry-header">
+{{--                        <center> <h1>SIGN IN</h1></center>--}}
+                    </header><!-- .entry-header -->
+<center>
+                    <div class="wrap-login100" >
 
-					</span>
-                </a>
-                <div class="wrap-input100 validate-input form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
+
+
+
+                        <form class="login100-form validate-form" method="post" action="{{ url('/login') }}" >
+                            {!! csrf_field() !!}
+
+                            <h5>Login</h5>
+                            <div class="wrap-input100 validate-input form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}" data-validate = "Valid email is required: ex@abc.xyz">
+                                <input class="input100" type="text" name="email" value="{{ old('email') }}" placeholder="Email">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                    @if ($errors->has('email'))
-                        <span class="help-block">
+                                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                                @if ($errors->has('email'))
+                                    <span class="help-block">
                  <strong>{{ $errors->first('email') }}</strong>
              </span>
-                    @endif
-                </div>
+                                @endif
+                            </div>
 
 
 
 
 
-                <div class="wrap-input100 validate-input form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}" data-validate = "Password is required">
-                    <input class="input100" type="password" name="password" placeholder="Password">
-                    <span class="focus-input100"></span>
-                    <span class="symbol-input100">
+                            <div class="wrap-input100 validate-input form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}" data-validate = "Password is required">
+                                <input class="input100" type="password" name="password" placeholder="Password">
+                                <span class="focus-input100"></span>
+                                <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    @if ($errors->has('password'))
-                        <span class="help-block">
+                                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                                @if ($errors->has('password'))
+                                    <span class="help-block">
                  <strong>{{ $errors->first('password') }}</strong>
              </span>
-                    @endif
-                </div>
+                                @endif
+                            </div>
 
-                <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" style="background: #dc3545;">
-                        Login
-                    </button>
-                </div>
+                            <div class="container-login100-form-btn">
+                                <button class="login100-form-btn" style="background: #dc3545;">
+                                    Login
+                                </button>
+                            </div>
 
-                <div class="text-center p-t-12">
+                            <div class="text-center p-t-12">
 						<span class="txt1">
 							Forgot
 						</span>
-                    <a class="txt2" href="{{ url('/password/reset') }}">
-                        Username / Password?
-                    </a>
-                </div>
-                <div class="text-center ">
+                                <a class="txt2" href="{{ url('/password/reset') }}">
+                                    Username / Password?
+                                </a>
+                            </div>
+                            <div class="text-center ">
 
-                    <a class="txt2" href="{{ url('/register') }}">
-                        Create your Account
-                        <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                    </a>
-                </div>
+                                <a class="txt2" href="{{ url('/register') }}">
+                                    Create your Account
+                                    <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                                </a>
+                            </div>
 
-            </form>
-        </div>
-    </div>
-</div>
-
+                        </form>
+                    </div>
+</center>
 
 
+                    {{-- code of including the branding code--}}
+                    @include('layouts.branding')
+                    {{-- code of including the branding code--}}
 
-<!--===============================================================================================-->
-<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-<script src="vendor/tilt/tilt.jquery.min.js"></script>
-<script >
-    $('.js-tilt').tilt({
-        scale: 1.1
-    })
-</script>
-<!--===============================================================================================-->
-<script src="js/main.js"></script>
 
+                    {{-- code of including the footer bav code--}}
+                    @include('footerr.footer_bar')
+                    {{-- code of including the footer bav code--}}
+
+                    {{-- code of including the footerlinks bav code--}}
+                    @include('footerr.footer')
+                    {{-- code of including the footerlinks bav code--}}
+
+                </div><!-- .col -->
+
+
+
+
+            </div></div></div></div>
 </body>
 </html>

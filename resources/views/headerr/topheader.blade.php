@@ -22,11 +22,14 @@
 
                         <div class="header-bar-menu">
                             <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                <li><a href="{{ url('register') }}">Register</a></li>
-                                <li><a href="{{ url('login') }}">Login</a></li>
+                                <li><a  href="{{ url('register') }}">Register</a></li>
+                                <li><a href="{{ url('login') }}"><i class="fa fa-lock"></i>Login</a></li>
                             </ul>
                         </div><!-- .header-bar-menu -->
                     </div><!-- .col -->
                 </div><!-- .row -->
             </div><!-- .container-fluid -->
         </div><!-- .top-header-bar -->
+
+
+

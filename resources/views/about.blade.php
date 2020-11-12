@@ -55,7 +55,7 @@
 {{-- code of including the testmony code--}}
 
 {{-- code of including the about-us file ourteam code--}}
-@include('about-us.ourteam')
+{{--@include('about-us.ourteam')--}}
 {{-- code of including the about-us file ourteam  code--}}
 
 

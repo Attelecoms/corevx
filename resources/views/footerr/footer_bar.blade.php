@@ -16,7 +16,7 @@
 
                 <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
                     <div class="follow-us">
-                        <h2>Atcademy</h2>
+                        <h2>Atacademy</h2>
 
 
                         <ul class="follow-us flex flex-wrap align-items-center">

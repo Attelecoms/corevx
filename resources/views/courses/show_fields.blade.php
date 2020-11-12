@@ -35,13 +35,13 @@
     <h3>$ {{ $course->discount_price }}</h3>
     <strike><p>$ {{ $course->actual_price }}</p></strike>
 </div>
-
+@if(Auth::user()->role_id<3 )
 <!-- Updated At Field -->
 <div class="form-group  col-md-6">
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{{ ($course->updated_at)->format('h :i a-Dd M Y') }}</p>
 </div>
-
+@endif
 {{--<!-- Actual Price Field -->--}}
 {{--<div class="form-group  col-md-6">--}}
 {{--    --}}{{--    {!! Form::label('actual_price', 'Actual Price:') !!}--}}

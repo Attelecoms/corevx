@@ -14,9 +14,11 @@ Route::get('/', 'HomeController@welcome');
 Route::get('index', 'HomeController@home');
 Route::get('about', 'HomeController@about');
 Route::get('course', 'HomeController@course');
-Route::get('contact', 'HomeController@contact');
-Route::get('blog', 'HomeController@blog');
 
+//Route::get('contact', 'HomeController@contact');
+Route::get('contact', 'ContactMessageController@create');
+Route::get('blog', 'HomeController@blog');
+Route::post('/contact', ['uses'=> 'ContactMessageController@store','as'=>'contact.store']);
 
 Auth::routes(['verify'=>true]);
 

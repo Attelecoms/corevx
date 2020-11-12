@@ -52,8 +52,10 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-        $courses = Course::inRandomOrder()->take(6)->get();
-        $users = User::all(); $course_outlines = Course_outlines::all();
+//        $courses = Course::inRandomOrder()->take(6)->get();
+        $courses = Course::latest()->take(6)->get();
+        $users = User::all();
+        $course_outlines = Course_outlines::all();
         return view('index')
             ->with('courses',$courses)
             ->with('course_outlines', $course_outlines)
@@ -89,8 +91,11 @@ class HomeController extends Controller
         $categories = Category::inRandomOrder()->get();
         $latestcourses = Course::latest()->take(4)->get();
         $courses = Course::inRandomOrder()->take(6)->get();
-
-        return view('course')->with('courses',$courses)->with('latestcourses',$latestcourses)->with('categories', $categories);
+        $course_outlines = Course_outlines::all();
+        return view('course')->with('courses',$courses)
+            ->with('course_outlines', $course_outlines)
+            ->with('latestcourses',$latestcourses)
+            ->with('categories', $categories);
     }
 
     public function about(){
@@ -102,6 +107,14 @@ class HomeController extends Controller
         $courses = Course::all();
 
         return view('about')->with('courses',$courses)->with('categories', $categories);
+    }
+    public function store(Request $request)
+    {
+        $this->validate($request,[
+            'name'=>'required',
+            'email'=>'required|email',
+            'message'=>'required'
+        ]);
     }
 
 }

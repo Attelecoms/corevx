@@ -4,7 +4,7 @@
     <div class="row mx-m-25">
         @foreach($courses as $course)
 
-        <div class="col-12 col-md-6 px-25">
+        <div class="col-12 col-md-6 px-25" data-toggle="modal" data-target="{{ '#'. str_limit($course->title ,$limit=40 ,$end='...')}}">
             <div class="course-content">
                 <figure class="course-thumbnail">
                     <a href="{{url('/courses/'. $course->id) }}">
@@ -47,6 +47,12 @@
                 </div><!-- .course-content-wrap -->
             </div><!-- .course-content -->
         </div><!-- .col -->
+
+
+            {{--                                            adding modal of the course--}}
+            @include('layouts.modalcourses')
+            {{--                                                end of modal --}}
+
         @endforeach
     </div>
 
