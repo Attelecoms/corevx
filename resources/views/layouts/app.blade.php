@@ -30,14 +30,14 @@
     @yield('css')
 </head>
 
-<body class="skin-blue sidebar-mini">
+<body class="skin-blue sidebar-mini " >
 @if (!Auth::guest())
-    <div class="wrapper">
+    <div class="wrapper " >
         <!-- Main Header -->
-        <header class="main-header">
+        <header class="main-header " >
 
             <!-- Logo -->
-            <a href="#" class="logo">
+            <a href="#" class="logo" style="background-color: #222d32;">
                 <b>Atacademy</b>
             </a>
 
@@ -48,7 +48,7 @@
                     <span class="sr-only">Toggle navigation</span>
                 </a>
                 <!-- Navbar Right Menu -->
-                <div class="navbar-custom-menu">
+                <div class="navbar-custom-menu" style="margin-left: 80%;" >
                     <ul class="nav navbar-nav">
                         <!-- User Account Menu -->
                         <li class="dropdown user user-menu">

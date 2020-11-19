@@ -335,17 +335,20 @@ a:hover, a:active {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-content {
-    background: url("images/hero-bg.jpg") no-repeat center;
+    background: url("images/go1-mobile-phone-screen-shot.jpg") no-repeat center;
     background-size: cover;
+
+
 }
 
 .hero-content-overlay {
-    background: rgba(21,20,33,.5);
+    background: rgba(0,0,0,.3)
 }
 
 .hero-content-wrap {
-    height: 820px;
+    height: 570px;
     padding-top: 130px;
+
 }
 
 .hero-content-wrap h4 {
@@ -1164,7 +1167,7 @@ a.btn:hover {
 }
 
 .page-header-overlay {
-    background: rgba(21,20,33,.5);
+    background: rgba(21,20,33,.3);
     height: 390px;
     padding-top: 236px;
 }
@@ -1447,7 +1450,7 @@ a.btn:hover {
 # Single Courses Page
 --------------------------------------------------------------*/
 .single-courses-page .page-header {
-    background: url("images/single-courses-bg.jpg") no-repeat center;
+    background: url("images/go1-mobile-phone-screen-shot.jpg") no-repeat center;
 }
 
 .single-courses-page .page-header-overlay {
@@ -1889,7 +1892,7 @@ ul.black-doted {
 # About Page
 --------------------------------------------------------------*/
 .about-page .page-header {
-    background: url(images/courses-header.jpg) no-repeat center;
+    background: url(images/go1-mobile-phone-screen-shot.jpg) no-repeat center;
 }
 
 .about-heading,
@@ -2012,7 +2015,7 @@ ul.black-doted {
 # Blog Page
 --------------------------------------------------------------*/
 .blog-page .page-header {
-    background: url("images/courses-header.jpg") no-repeat center;
+    background: url("images/go1-mobile-phone-screen-shot.jpg") no-repeat center;
 }
 
 .blog-posts {
@@ -2101,7 +2104,7 @@ ul.black-doted {
 # Single Blog Post
 --------------------------------------------------------------*/
 .single-blog-post .page-header {
-    background: url("images/single-courses-bg.jpg") no-repeat center;
+    background: url("images/go1-mobile-phone-screen-shot.jpg") no-repeat center;
 }
 
 .single-blog-post .page-header-overlay {
@@ -2503,7 +2506,7 @@ ul.author-social-profile li:hover .fa {
 # Contact Page
 --------------------------------------------------------------*/
 .contact-page .page-header {
-    background: url(images/courses-header.jpg) no-repeat center;
+    background: url(images/go1-mobile-phone-screen-shot.jpg) no-repeat center;
 }
 
 .contact-page .contact-gmap {

@@ -78,7 +78,7 @@
     {!! Form::label('photo', 'Upload Course Photo:') !!}
 {{--    {!! Form::file('photo',null, ['class' => 'form-control']) !!}--}}
     <input type="file" id="photo" name="photo" accept="image/png, image/jpeg" required>
-
+<a style="color: red;" >image should be of size 184 width and 125 height</a>
 </div>
 
 
@@ -100,7 +100,18 @@
     </select>
 </div>
 
+<div class="form-group col-sm-6">
+    {!! Form::label('typesofcourse', 'Course Status:') !!}
+    {{--    {!! Form::number('admin_status', null, ['class' => 'form-control']) !!}--}}
+    <select class="form-control" name="typesofcourse" id="typesofcourse" style="height:40px; ">
 
+        <option value="Online course">Online course only</option>
+        <option value="Inclass course">Inclass course only</option>
+        <option value="Both(Inclass & Online course)">Both(Inclass & Online course)</option>
+
+
+    </select>
+</div>
 
 <!-- What Will Students Learn Field -->
 <div class="form-group col-sm-12 col-lg-8">

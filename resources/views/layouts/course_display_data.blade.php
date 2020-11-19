@@ -1,5 +1,10 @@
 
 <!------ Include the above in your HEAD tag ---------->
+@foreach($courses as $course)
+    @include('layouts.modalcourses')
+
+
+@endforeach
 
 <section id="tabs" class="project-tab">
     <div class="container">
@@ -47,7 +52,9 @@
                                                                 {{  str_limit($course->title ,$limit=40 ,$end='...')}}
                                                             </a></h2>
                                                         <a >
-
+                                                            <a >
+                                                                {{  str_limit($course->sub_title ,$limit=40 ,$end='...')}}
+                                                            </a>
                                                             <div class="entry-meta flex align-items-center">
                                                                 <div class="course-author">
                                                                     {{ $course->user['name'] }}
@@ -55,6 +62,14 @@
                                                                 </div>
 
                                                                 <div class="course-date">{{ $course->created_at->format('h :i a-Dd M Y') }}</div>
+                                                            </div><!-- .course-date -->
+                                                            <div class="entry-meta flex align-items-center text-warning">
+                                                                <div class="course-author">
+                                                                    Type of Course
+
+                                                                </div>
+
+                                                                <div class="course-date">{{ $course->typesofcourse }}</div>
                                                             </div><!-- .course-date -->
                                                         </a>
                                                     </header><!-- .entry-header -->
@@ -80,8 +95,6 @@
 
                                         </div>
 
-                                        @include('layouts.modalcourses')
-
 
 
                                 @endforeach
@@ -89,37 +102,39 @@
                         </div>
 
                     </div>
-                    @foreach($categories as $category)
-                    <div class="tab-pane fade success" id="{{'nav-'.$category->name }}" role="tabpanel" aria-labelledby="{{'nav-'.$category->name.'-tab' }}">
 
+
+
+
+                    {{--select all categories--}}
+
+                    @foreach($categories as $category)
+                    <div class="tab-pane fade success" id="{{'nav-'.$category->name }}" role="tabpanel" aria-labelledby="{{'nav-'.$category->name.'-tab' }}" style="height: 462px;">
 
 {{--grid system start--}}
                         <div class="container">
                             <div class="row">
+                                {{--select all courses --}}
                                 @foreach($courses as $course)
-                                    @if($course->category_id==$category->id)
-
-{{--                                    <div class="col-sm">--}}
+                                    {{--select all course with same course->category_id in course table be equal to category->id in category table--}}
+                                    @if($category->id==$course->category_id)
+                                        {{--display of card of the course--}}
                                         <div class="col-12 col-md-6 col-lg-4 px-25" data-toggle="modal" data-target="{{ '#'. str_limit($course->title ,$limit=40 ,$end='...')}}">
-
-
                                             <div class="course-content">
                                                 <figure class="course-thumbnail">
                                                     <a >
-
-
-
                                                         <img src="{{  asset('storage/course_image/'.$course->photo)}}"  alt="">
-
                                                     </a>
                                                 </figure><!-- .course-thumbnail -->
-
                                                 <div class="course-content-wrap">
                                                     <header class="entry-header">
                                                         <h2 class="entry-title">
                                                             <a >
                                                                 {{  str_limit($course->title ,$limit=40 ,$end='...')}}
                                                             </a></h2>
+                                                        <a >
+                                                            {{  str_limit($course->sub_title ,$limit=40 ,$end='...')}}
+                                                        </a>
                                                         <a >
 
                                                             <div class="entry-meta flex align-items-center">
@@ -154,17 +169,23 @@
 
                                         </div>
 
-                                        @include('layouts.modalcourses')
+                                        {{--end of card course--}}
 
-
-                                        @endif
+{{--                                    @else--}}
+{{--                                        {{'no courses '}}--}}
+                                    @endif
                                 @endforeach
+
+                                {{--end of courseloop--}}
                             </div>
+
                         </div>
 
                 </div>
                     @endforeach
             </div>
+
         </div>
+    </div>
     </div>
 </section>

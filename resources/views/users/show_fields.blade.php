@@ -13,7 +13,6 @@
 
 <!-- Button trigger modal -->
 
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -41,7 +40,7 @@
                     <input type="text" value="" name="id_number" class="form-control-xs" required/><br>
                 </div>
                 <div class="form-group col-md-6 text-muted">
-                    {!! Form::label('', 'Upload Satified Certificate:') !!}<br>
+                    {!! Form::label('', 'Upload Your  Qualifications Certified:') !!}<br>
 {{--                    {!! Form::file('certificate_photo',null , ['class' => 'form-control']) !!}--}}
                     <input type="file" id="certificate_photo" name="certificate_photo" accept="image/png, image/jpeg" required>
                     <br>
@@ -71,7 +70,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 {!! Form::button('Send your request', ['type' => 'submit', 'class' => 'btn btn-primary ']) !!}
 
 
@@ -92,9 +91,13 @@
 {{--    {!! Form::label('view_count', ' Count:') !!}--}}
     <p>Profile viewed {{ $user->view_count }} times</p>
 </div>
+
+@if(Session::has('flash_message'))
+    <div class="alert alert-success">{{Session::get('flash_message')}}</div>
+@endif
 <div class="form-group col-md-6 text-muted">
     {{--    {!! Form::label('view_count', ' Count:') !!}--}}
-    <a style="color:white;" class="btn badge-danger" type="button"  data-toggle="modal" data-target="#exampleModal">Become an instructor</a>
+    <a style="color:white;" class="btn btn-primary" type="button"  data-toggle="modal" data-target="#exampleModal">Become an instructor</a>
 </div>
 
 

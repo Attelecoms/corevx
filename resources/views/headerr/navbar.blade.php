@@ -1,4 +1,4 @@
-<div class="nav-bar sticky-top">
+<div class="nav-bar ">
     <div class="container">
         <div class="row">
             <div class="col-9 col-lg-3">

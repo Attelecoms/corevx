@@ -15,7 +15,7 @@
                     <h3 class="text-center w-100">Subscriber</h3>
                     @include('users.table-user')
                     @endif
-                    <a href="{{ route('courses.index') }}" class="btn btn-default">Back</a>
+{{--                    <a href="{{ route('courses.index') }}" class="btn btn-default">Back</a>--}}
                 </div>
             </div>
         </div>

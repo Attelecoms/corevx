@@ -108,7 +108,7 @@
 
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" type="submit" style="background: #dc3545;">Register</button>
+                    <button class="login100-form-btn btn-success" type="submit" >Register</button>
 
                 </div>
 

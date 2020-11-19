@@ -31,7 +31,7 @@ background: radial-gradient(circle, rgba(211,211,211,1) 4%, rgba(255,255,255,1) 
 
                 <a  href="{{ url('/') }}">
  <span class="login100-form-title">
-						   <img src="../uploads/images/logo/liveonlineacademy/logo.png" alt="IMG" style="border-radius: 15px; width: 150px;">
+						   <img src="{{asset('log/logo.png')}}" alt="IMG" style="border-radius: 15px; width: 150px;">
 
 					</span>
                 </a>

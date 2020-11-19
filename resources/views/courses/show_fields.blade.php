@@ -50,8 +50,9 @@
 
 {{--create the pay button--}}
 <div class="form-group  col-md-6">
-    <a class="btn btn-success btn-lg" href="{{ $course->paynow_url }}"> Buy Course $ {{ $course->discount_price }} </a>
+    <a class="btn btn-success btn-lg" target="_blank" href="{{ $course->paynow_url }}"> Buy Course $ {{ $course->discount_price }} </a>
     <br>
+    @if( $course->typesofcourse !='Inclass course')
     OR
     <br>
     {!! Form::open(['route' => ['courses.tokenCourse', $course->id], 'method' => 'post']) !!}
@@ -60,6 +61,7 @@
     <input type="text" value="" name="token" class="form-control-xs" required/>
     {!! Form::button('<i class="fa fa-lock"></i>Use Token', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
     {!! Form::close() !!}
+        @endif
 </div>
 
 
@@ -211,9 +213,9 @@
             <tbody>
             <tr>
 {{--                <th scope="row">1</th>--}}
-                <td><i class="fa fa-certificate"></i></td>
+                <th style="width:5px"><i class="fa fa-certificate"></i></th>
                 <th> {{ $course_outline->course_title}}</th>
-                <th> {{ $course_outline->duration}}</th>
+                <th style="width:5px"> {{ $course_outline->duration}}</th>
             </tr>
 
             </tbody>

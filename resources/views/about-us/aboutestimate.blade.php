@@ -6,10 +6,10 @@
                 <header class="heading">
                     <h2 class="entry-title">About Atacademy</h2>
 
-                    <p>Atacademy realizes that prudent business practices require that information security
+                    <p class="text-justify">Atacademy realizes that prudent business practices require that information security
                         technology processes and initiatives align and support business processes and objectives. To this end,
-                        our tailored consulting service portifolio embraces information risk management, which employs cost ‑
-                        effective rock‑solid protection, and ensures that your security capabilities are still supporting your
+                        our tailored consulting service portifolio embraces information risk management, which employs cost
+                        effective rock solid protection, and ensures that your security capabilities are still supporting your
                         business objectives and directions.</p>
                 </header><!-- .heading -->
 

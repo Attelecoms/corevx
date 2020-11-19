@@ -25,7 +25,7 @@
             <div class="about-stories">
                 <h3>Focused Service</h3>
 
-                <p>While our supposed competitors offer a diverse range of run ‑of‑the‑mill services and training
+                <p class="text-justify">While our supposed competitors offer a diverse range of run of the mill services and training
                     programs, we resolved to be purely a specialist computing entity that offers specialist IT/IS auditing,
                     security, forensics and analytics training and services and nothing more. Our rationale behind this
                     resolution is simple; that we need to remain focused in a specific business area we can exhaust our
@@ -47,11 +47,11 @@
             <div class="about-values">
                 <h3>Quality assurance</h3>
 
-                <p>Information Technology is an expensive investment at the hands of the client. When customers make
+                <p class="text-justify">Information Technology is an expensive investment at the hands of the client. When customers make
                     such critical decisions to invest in Information Technology and Communications we seek to reward
                     them by helping make their investment a success through the delivery of quality assured services and
                     training solutions. We seek to uphold the values and be the epitome of quality and professional ism
-                    both in terms of business management and service delivery. To this end, we are en ‑route to ISO 9001
+                    both in terms of business management and service delivery. To this end, we are en route to ISO 9001
                     certification.</p>
 
 

@@ -28,6 +28,7 @@ class CreateCoursesTable extends Migration
 //            $table->longText('course_calendar')->nullable();//php laravel;
 //            $table->longText('course_outline')->nullable();//php laravel;
             $table->longText('promo_video_url')->nullable();//php laravel;
+            $table->longText('typesofcourse')->nullable();//php laravel;
             $table->integer('creator_status')->default(0);
             $table->integer('admin_status')->default(0);
             //target your students

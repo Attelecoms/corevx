@@ -30,6 +30,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property number actual_price
  * @property integer view_count
  * @property integer subscriber_count
+ * @property integer typesofcourse
  */
 class Course extends Model
 {
@@ -65,8 +66,8 @@ class Course extends Model
         'actual_price',
         'paynow_url',
         'view_count',
-        'subscriber_count'
-//        'course_calendar',
+        'subscriber_count',
+        'typesofcourse'
 //        'course_outline'
     ];
 
@@ -96,8 +97,8 @@ class Course extends Model
         'actual_price' => 'float',
         'paynow_url' => 'string',
         'view_count' => 'integer',
-        'subscriber_count' => 'integer'
-//        'course_calendar'=>'string',
+        'subscriber_count' => 'integer',
+        'typesofcourse'=>'string'
 //        'course_outline'=>'string'
     ];
 

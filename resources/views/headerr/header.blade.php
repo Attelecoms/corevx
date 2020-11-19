@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="log/logoicon.png" type="image/x-icon" style="border-radius: 10px;">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 

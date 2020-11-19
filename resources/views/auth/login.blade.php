@@ -44,9 +44,6 @@
 <center>
                     <div class="wrap-login100" >
 
-
-
-
                         <form class="login100-form validate-form" method="post" action="{{ url('/login') }}" >
                             {!! csrf_field() !!}
 
@@ -84,7 +81,7 @@
                             </div>
 
                             <div class="container-login100-form-btn">
-                                <button class="login100-form-btn" style="background: #dc3545;">
+                                <button class="login100-form-btn  btn-success" >
                                     Login
                                 </button>
                             </div>

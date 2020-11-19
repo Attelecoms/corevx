@@ -14,15 +14,15 @@
 
                     <div class="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                         <div class="header-bar-search">
-                            <form class="flex align-items-stretch">
-                                <input type="search" placeholder="What would you like to learn?">
-                                <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>
-                            </form>
+{{--                            <form class="flex align-items-stretch">--}}
+{{--                                <input type="search" placeholder="What would you like to learn?">--}}
+{{--                                <button type="submit" value="" class="flex justify-content-center align-items-center"><i class="fa fa-search"></i></button>--}}
+{{--                            </form>--}}
                         </div><!-- .header-bar-search -->
 
                         <div class="header-bar-menu">
                             <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                                <li><a  href="{{ url('register') }}">Register</a></li>
+                                <li><a  href="{{ url('register') }}"><i class="fa fa-user-circle-o"></i>Register</a></li>
                                 <li><a href="{{ url('login') }}"><i class="fa fa-lock"></i>Login</a></li>
                             </ul>
                         </div><!-- .header-bar-menu -->

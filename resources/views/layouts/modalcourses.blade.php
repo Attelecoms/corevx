@@ -29,9 +29,9 @@
                                     <tbody>
                                     <tr>
                                         {{--                <th scope="row">1</th>--}}
-                                        <td><i class="fa fa-certificate"></i></td>
-                                        <td> {{ $course_outline->course_title}}</td>
-                                        <td> {{ $course_outline->duration}}</td>
+                                        <td style="width:5px"><i class="fa fa-certificate"></i></td>
+                                        <td class="text-justify"> {{ $course_outline->course_title}}</td>
+                                        <td style="width:5px"> {{ $course_outline->duration}}</td>
                                     </tr>
 
                                     </tbody>
@@ -42,11 +42,11 @@
                     <div class="row" style="margin-top: 30px;">
                         <div class="col-md">
                             <center><h6 class="modal-title" id="exampleModalLabel">Target Students:</h6>
-                                <p>{{ $course->target_students }}</p></center>
+                                <p class="text-justify">{{ $course->target_students }}</p></center>
                         </div>
                         <div class="col-md">
                             <center><h6 class="modal-title" id="exampleModalLabel">Requirements:</h6>
-                                <p>{{ $course->requirements }}</p></center>
+                                <p class="text-justify">{{ $course->requirements }}</p></center>
                         </div>
 
                     </div>
@@ -58,7 +58,7 @@
             <a href="{{url('/courses/'. $course->id) }}">
                 <div class="modal-footer">
                     {{--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    <button   class="btn btn-danger">Proceed ${{  $course->discount_price }} Buy Now <i class="fa fa-arrow-right"></i></button>
+                    <button   class="btn btn-success">Proceed ${{  $course->discount_price }} Buy Now <i class="fa fa-arrow-right"></i></button>
                 </div>
             </a>
             {{--                            end footer modal--}}

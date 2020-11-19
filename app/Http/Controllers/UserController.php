@@ -74,7 +74,7 @@ class UserController extends AppBaseController
                                                      'accountNumber'=>$request->accountNumber
         ]);
         Flash::success('Course unpublished successful');
-        return redirect()->back();
+        return redirect()->back()->with('flash_message','Your request have successfully submitted for processing');
     }
 
     /**
