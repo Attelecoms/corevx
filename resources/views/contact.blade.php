@@ -91,7 +91,7 @@
 {{-- code of including the footer bav code--}}
 
 {{-- code of including the footerlinks bav code--}}
-@include('footerr.footer')
+{{--@include('footerr.footer')--}}
 {{-- code of including the footerlinks bav code--}}
 
 </body>

@@ -23,8 +23,12 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <link href="bundles/earlycssca38.css?v=2.34.2" rel="stylesheet"/>
 
-{{--    links f0r pop up bootstrap --}}
+    <script src="bundles/earlyjsca38?v=2.34.2"></script>
+
+
+    {{--    links f0r pop up bootstrap --}}
 
 {{--    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">--}}
 {{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>--}}

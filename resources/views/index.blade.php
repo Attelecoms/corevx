@@ -54,13 +54,13 @@
 
 
 {{-- code of including the course_available code--}}
-{{--@include('layouts.course_available')--}}
+@include('layouts.indexrepair')
 {{-- code of including the course_available code--}}
 
 
 
 {{-- code of including the course_display_data code--}}
-@include('layouts.course_display_data')
+{{--@include('layouts.course_display_data')--}}
 {{-- code of including the course_display_data code--}}
 {{--<style>--}}
 {{--.zoom {--}}
@@ -123,7 +123,7 @@
 {{-- code of including the footer bav code--}}
 
 {{-- code of including the footerlinks bav code--}}
-@include('footerr.footer')
+{{--@include('footerr.footer')--}}
 {{-- code of including the footerlinks bav code--}}
 
 

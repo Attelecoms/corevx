@@ -40,7 +40,7 @@
                     <input type="text" value="" name="id_number" class="form-control-xs" required/><br>
                 </div>
                 <div class="form-group col-md-6 text-muted">
-                    {!! Form::label('', 'Upload Your  Qualifications Certified:') !!}<br>
+                    {!! Form::label('', 'Your  Qualifications Certified:') !!}<br>
 {{--                    {!! Form::file('certificate_photo',null , ['class' => 'form-control']) !!}--}}
                     <input type="file" id="certificate_photo" name="certificate_photo" accept="image/png, image/jpeg" required>
                     <br>
