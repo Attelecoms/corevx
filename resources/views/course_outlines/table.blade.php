@@ -13,8 +13,8 @@
         <tbody>
         @foreach($courseOutlines as $courseOutlines)
             <tr>
-                <td>{{ $courseOutlines->user_id }}</td>
-            <td>{{ $courseOutlines->course_id }}</td>
+                <td>{{ $courseOutlines->user['name']}}</td>
+            <td>{{ $courseOutlines->course['title'] }}</td>
             <td>{{ $courseOutlines->course_title_no }}</td>
             <td>{{ $courseOutlines->course_title }}</td>
             <td>{{ $courseOutlines->duration }}</td>

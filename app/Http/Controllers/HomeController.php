@@ -38,7 +38,7 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-        $courses = Course::latest()->take(6)->get();
+        $courses = Course::inRandomOrder()->get();
         $users = User::all();
         $course_outlines = Course_outlines::all();
         return view('index')->with('courses',$courses)
@@ -52,8 +52,8 @@ class HomeController extends Controller
             return redirect()->route('courses.index');
         }
         $categories = Category::all();
-//        $courses = Course::inRandomOrder()->take(6)->get();
-        $courses = Course::latest()->take(6)->get();
+        $courses = Course::inRandomOrder()->take(6)->get();
+//        $courses = Course::latest()->take(6)->get();
         $users = User::all();
         $course_outlines = Course_outlines::all();
         return view('index')

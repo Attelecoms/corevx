@@ -1,8 +1,5 @@
 
 
-<li class="{{ Request::is('categories*') ? 'active' : '' }}">
-    <a href="{{ route('categories.index') }}"><i class="fa fa-list"></i><span>Courses Category</span></a>
-</li>
 <li class="{{ Request::is('courses*') ? 'active' : '' }}">
     <a href="{{ route('courses.index') }}"><i class="fa fa-certificate"></i><span>Courses List</span></a>
 </li>
@@ -32,6 +29,9 @@
         <a href="#"><i class="fa fa-edit"></i><span>ADMIN MENU</span></a>
     </li>
 
+    <li class="{{ Request::is('categories*') ? 'active' : '' }}">
+        <a href="{{ route('categories.index') }}"><i class="fa fa-list"></i><span>Courses Category</span></a>
+    </li>
     <li class="{{ Request::is('courseUsers*') ? 'active' : '' }}">
         <a href="{{ route('courseUsers.index') }}"><i class="fa fa-bookmark"></i><span>My Subscriptions</span></a>
     </li>

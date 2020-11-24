@@ -20,12 +20,14 @@
 
     <ul class="nav nav-tabs">
 {{--        selct all courses--}}
-        <li class="active"><a data-toggle="tab" href="#home">All Courses </a></li>
+
+
+        <li class="active"><a data-toggle="tab" href="#home"><b>All Courses</b> </a></li>
         {{--        selct all courses--}}
 
         {{--        selct all catergory--}}
         @foreach($categories as $category)
-        <li><a data-toggle="tab" href="{{'#'.$category->name }}">{{$category->name }}</a></li>
+        <li><a data-toggle="tab" href="{{'#'.$category->id }}"><b>{{$category->name }}</b></a></li>
 {{--        <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>--}}
 {{--        <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>--}}
         {{--        selct all category--}}
@@ -72,16 +74,16 @@
                             {{--start of card--}}
                             @foreach($courses as $course)
 
-                            <a title="{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}" style="height: 300px; width: 300px;padding: 10px;"
+                            <a title="{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}" style="height: 400px; width: 335px;"
                                data-toggle="modal" data-target="{{ '#'. str_limit($course->title ,$limit=40 ,$end='...')}}">
 
-                                <div class="icon-container" style="height: 200px;">
+                                <div class="icon-container" >
 
-                                    <img src="{{  asset('storage/course_image/'.$course->photo)}}"  alt="" style="height: 600px; width: 600px;padding: -10px;">
+                                    <img src="{{  asset('storage/course_image/'.$course->photo)}}"  alt="" >
                                     <br />
-                                    <br><h2 class="entry-title">{{  str_limit($course->title ,$limit=40 ,$end='...')}}</h2>
-                                    <h4 class="entry-title">{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}</h4>
-                                    <div class="entry-meta flex align-items-center">
+                                    <h2 class="entry-title " >{{  str_limit($course->title ,$limit=40 ,$end='...')}}</h2>
+                                    <h4 class="entry-title" >{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}</h4>
+                                    <div class="entry-meta flex align-items-center" style="padding-left: 15px;" >
                                         <div class="course-author"><i class="fa fa-user-circle"></i>
                                             {{ $course->user['name'] }}
 
@@ -89,7 +91,7 @@
 
                                         <div class="course-date"> Created on :{{ $course->created_at->format('d M Y') }}</div>
                                     </div>
-                                    <div class="entry-meta flex align-items-center text-warning">
+                                    <div class="entry-meta flex align-items-center text-warning" style="padding-left: 15px;" >
                                         <div class="course-author">
                                             Type of Course
 
@@ -98,13 +100,12 @@
                                         <div class="course-date">{{ $course->typesofcourse }}</div>
                                     </div>
 
-
-                                    <footer class="entry-footer flex justify-content-between align-items-center">
+                                    <footer class="entry-footer flex justify-content-between align-items-center" style="padding-left: 15px;">
                                         <div class="course-cost">
-                                            $23 <span class="price-drop">$34</span>
+                                            ${{  $course->discount_price }} <span class="price-drop">${{  $course->actual_price }}</span>
                                         </div><!-- .course-cost -->
 
-                                        <div class="course-ratings flex justify-content-end align-items-center">
+                                        <div class="course-ratings flex justify-content-end align-items-center" style="padding-right: 25px;">
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
                                             <span class="fa fa-star checked"></span>
@@ -114,6 +115,7 @@
                                             <span class="course-ratings-count">(4 votes)</span>
                                         </div><!-- .course-ratings -->
                                     </footer><!-- .entry-footer -->
+
                                 </div>
                             </a>
                             {{--end of the card--}}
@@ -136,7 +138,7 @@
 
 
         @foreach($categories as $category)
-        <div id="{{$category->name }}" class="tab-pane fade" style="height: 462px; border: none;" >
+        <div id="{{$category->id }}" class="tab-pane fade" style="height: 462px; border: none;" >
 {{--            <h3>Menu 1</h3>--}}
 {{--            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>--}}
 
@@ -175,16 +177,16 @@
                             {{--start of card--}}
                             @foreach($courses as $course)
                                 @if($category->id==$course->category_id)
-                                <a title="{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}" style="height: 300px; width: 300px;padding: 10px;"
-                                   data-toggle="modal" data-target="{{ '#'. str_limit($course->title ,$limit=40 ,$end='...')}}">
+                                    <a title="{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}" style="height: 400px; width: 335px;"
+                                       data-toggle="modal" data-target="{{ '#'. str_limit($course->title ,$limit=40 ,$end='...')}}">
 
-                                    <div class="icon-container" style="height: 200px;">
+                                    <div class="icon-container" >
 
-                                        <img src="{{  asset('storage/course_image/'.$course->photo)}}"  alt="" style="height: 600px; width: 600px;padding: -10px;">
+                                        <img src="{{  asset('storage/course_image/'.$course->photo)}}"  alt="">
                                         <br />
                                         <br><h2 class="entry-title">{{  str_limit($course->title ,$limit=40 ,$end='...')}}</h2>
                                         <h4 class="entry-title">{{  str_limit($course->sub_title ,$limit=30 ,$end='...')}}</h4>
-                                        <div class="entry-meta flex align-items-center">
+                                        <div class="entry-meta flex align-items-center" style="padding-left: 15px;" >
                                             <div class="course-author"><i class="fa fa-user-circle"></i>
                                                 {{ $course->user['name'] }}
 
@@ -192,7 +194,7 @@
 
                                             <div class="course-date"> Created on :{{ $course->created_at->format('d M Y') }}</div>
                                         </div>
-                                        <div class="entry-meta flex align-items-center text-warning">
+                                        <div class="entry-meta flex align-items-center text-warning" style="padding-left: 15px;" >
                                             <div class="course-author">
                                                 Type of Course
 
@@ -201,13 +203,12 @@
                                             <div class="course-date">{{ $course->typesofcourse }}</div>
                                         </div>
 
-
-                                        <footer class="entry-footer flex justify-content-between align-items-center">
+                                        <footer class="entry-footer flex justify-content-between align-items-center" style="padding-left: 15px;">
                                             <div class="course-cost">
-                                                $23 <span class="price-drop">$34</span>
+                                                ${{  $course->discount_price }} <span class="price-drop">${{  $course->actual_price }}</span>
                                             </div><!-- .course-cost -->
 
-                                            <div class="course-ratings flex justify-content-end align-items-center">
+                                            <div class="course-ratings flex justify-content-end align-items-center" style="padding-right: 25px;">
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
                                                 <span class="fa fa-star checked"></span>
@@ -217,6 +218,7 @@
                                                 <span class="course-ratings-count">(4 votes)</span>
                                             </div><!-- .course-ratings -->
                                         </footer><!-- .entry-footer -->
+
                                     </div>
                                 </a>
                                 @endif

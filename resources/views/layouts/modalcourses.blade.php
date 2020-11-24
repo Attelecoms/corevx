@@ -10,27 +10,27 @@
 
 
             <div class="modal-body">
-
-                <iframe  style="width: 100% "height="350" src="{{ $course->promo_video_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                <div class="container">
+{{-- this code is for promo videos--}}
+{{--                <iframe  style="width: 100% "height="350" src="{{ $course->promo_video_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+                <center><h6 class="modal-title" id="exampleModalLabel">Course content</h6></center><BR>
+                <div class="container" style="width: 100% ">
                     <div class="row">
 
                         {{--                                       table for courses topics--}}
 
-                        <center><h6 class="modal-title" id="exampleModalLabel">Course content</h6></center>
+
                         {{--  {{ $course->what_will_students_learn }}--}}
                         @foreach ($course_outlines as $course_outline)
                             {{--                                               display when  condition is true if the course id is same as couse_outline ->couseid --}}
                             @if($course->id==$course_outline->course_id)
 
-                                <table class="table ">
+                                <table class="table" >
 
                                     <tbody>
                                     <tr>
                                         {{--                <th scope="row">1</th>--}}
                                         <td style="width:5px"><i class="fa fa-certificate"></i></td>
-                                        <td class="text-justify"> {{ $course_outline->course_title}}</td>
+                                        <td > {{ $course_outline->course_title}}</td>
                                         <td style="width:5px"> {{ $course_outline->duration}}</td>
                                     </tr>
 
@@ -58,7 +58,7 @@
             <a href="{{url('/courses/'. $course->id) }}">
                 <div class="modal-footer">
                     {{--                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--}}
-                    <button   class="btn btn-success">Proceed ${{  $course->discount_price }} Buy Now <i class="fa fa-arrow-right"></i></button>
+                    <button   class="btn" style="background: #19c880; color: white;" >Proceed ${{  $course->discount_price }} Buy Now <i class="fa fa-arrow-right"></i></button>
                 </div>
             </a>
             {{--                            end footer modal--}}
